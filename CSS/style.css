@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    animation: transitionIn 0.75s;
+}
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+nav{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+header{
+    background: linear-gradient(57deg,aqua,aquamarine);
+    width: 100%;
+    height: 100%;
+    border-radius: 0 30% 0 30%;
+}
+main{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 50%;
+    color:darkcyan;
+    padding-left: 10%;
+    font-size: 40px;
+    }
+.logo h1{
+    text-transform: capitalize;
+    text-shadow: 2px 2px 2px #dfe6e9;
+}
+.menu{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.menu a{
+    text-decoration: none;
+    color: #2d3436;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    scroll-behavior: smooth;
+}
+.leftside {
+    animation: updown 2s linear infinite;
+    animation-direction: alternate;
+}
+@keyframes updown{
+    from{padding-top: 40px;}
+    to{padding-bottom: 40px;}
+}
+.menu a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: all 0.5s linear;
+}
+.menu a:hover::before{
+    width: 50%;
+    background-color: #6c5ce7;
+}
+#sector{
+    display: flex;
+    padding-top: 50px;
+}
+#phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(57deg,aqua,aquamarine);
+    width: 100%;
+    height: 100%;
+    border-radius: 30% 0 30% 0;
+}
+.contact{
+    align-items: center;
+    justify-content: center;
+}
+.contact h1{
+    padding: 50px;
+}
+.contact p{
+    padding: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content:center;
+    font-weight: bold;
+}
+.about h1{
+    padding: 50px;
+    display: flex;
+    animation-duration: .7s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.about{
+    align-items: center;
+    justify-content: center;
+}
+.about p{
+    padding: 40px;
+    margin-top: 0;
+}
+
+.image{
+    width: 100vh;
+    height: 100vh;
+}
+.skills{
+    width: 500px;
+    margin: 60px auto;
+    padding: 20px ;
+    
+}
+
+ .skills li{
+    margin: 20px 0;
+    list-style: none;
+    position: relative;
+    padding: 20px;
+    font-weight: bold;
+
+}
+.skills li::before{
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: rgba(54,126,223,.5);
+    border-radius: 1000px;
+}
+.skills li::after{
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0;
+    height: 15px;
+    background-color: rgba(54,126,223,.5);
+    border-radius: 1000px;
+    animation-duration: .7s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.skills li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 90%;
+    }
+}
+.skills li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width: 70%;
+    }
+}
+.skills li.js::after{
+    animation-name: js;
+}
+@keyframes js{
+    to{
+        width: 60%;
+    }
+}
+.skills li.php::after{
+    animation-name: php;
+}
+@keyframes php{
+    to{
+        width: 40%;
+    }
+}
+footer{
+    background-color: black;
+}
+footer .centerdiv{
+    height:20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centerdiv a{
+    height: 60px;
+    width: 60px;
+    background-color: #f5f6fa;
+    border-radius: 50px;
+    line-height: 70px;
+    text-align: center;
+    display:space-around;
+}
+.centerdiv a i{
+    transition: all 0.3s linear;
+}
+.centerdiv a:hover i{
+    transform: scale(1.4);
+}
+.fa-facebook{
+    color: #e84393;
+}
+.fa-instagram{
+    color: e84118;
+}
+.fa-linked-in{
+    color: #0097e6;
+}
